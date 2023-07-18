@@ -1,0 +1,73 @@
+<html>
+    <head></head>
+    <body>
+        <div style="border: 4px solid salmon; margin: 10px;padding: 10px;">
+            <ul>
+                <li>India</li>
+                <li>Chennai</li>
+                <li>USA</li>
+                <li>America</li>
+            </ul>
+        </div>
+        
+        <div id="d1" style="border: 2px solid; margin: 10px; padding: 10px;">
+        <ul id="city"></ul>
+        </div>
+
+        <div id="d4" style="border: 2px solid blue; margin: 10px; padding: 10px">
+            <ul id="s1"></ul>
+            </div>
+    
+        
+    <script>
+        var cities=['hyderabad','sdpt','wrgl','banglore'];
+        cities.forEach(function(value){
+            var k=document.createElement('li')
+            k.innerHTML=value;
+            document.getElementById('city').appendChild(k)
+        })
+
+        var students=[
+            {
+                name:'sindhu',
+                gender:'female',
+                age:32,
+                place:'kndpk',
+                city:'sdpt'
+            },
+            {
+                name:'keerthi',
+                gender:'female'
+            },
+            {
+                name:'amma',
+                gender:'female'
+            },
+            {
+                name:'dady',
+                gender:'male'
+            },
+        ]
+
+        students.forEach(function(value){
+            var a=document.createElement('li');
+            a.innerHTML=value.name;
+            if(value.gender==="female"){
+                a.style.backgroundColor="red"
+            }
+            if(value.gender==="male"){
+                a.style.backgroundColor="yellow"
+            }
+            var details=document.createElement('ul');
+            var genderli=document.createElement('li')
+            genderli.innerHTML=value.gender;
+            var placeli=document.createElement('li');
+            placeli.innerHTML=value.place;
+            details.appendChild(genderli);
+            details.appendChild(placeli);
+            a.appendChild(details)
+            document.getElementById('s1').appendChild(a)
+        })
+            </script>
+    </body>
+</html>

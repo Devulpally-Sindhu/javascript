@@ -1,0 +1,77 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            var ar=[12,42,64,91,61]
+            console.log(ar[2]);
+            console.log(ar.at(2));
+            console.log(ar.at(4))
+            console.log(ar[-4]);//ar[-3] it doesnot takes -ve values
+            console.log(ar.at(5))
+            console.log(ar.at(-2))//ar.at it takes -ve values also
+
+            var a1=[14,41,24,54,98,99,91];
+            var a2=[65,94,91,61];
+            var a3=[49,28,32]
+            console.log(a1.concat(a3,a2));
+            console.log(a1.concat(a2,a3));
+
+            var b=[14,9,8,2,9,4,5,6,3]
+            var find4=b.find(function(value){
+                return value===5
+            })
+            console.log(find4)//checks the value in the given array
+
+            var findout=b.find(function(value){
+                return value<21
+            })
+            console.log(findout)//it checks the condition at first occurence only
+
+            var findout=b.findIndex(function(value){
+                return value===9
+            })
+            console.log(findout)//checks the value in the array
+
+            var findout=b.findIndex(function(value){
+                return value<21
+            })
+            console.log(findout)
+
+            var findout=b.findIndex(function(value){
+                return value>6
+            })
+            console.log(findout)
+
+            var findout=b.findLast(function(value){
+                return value>6
+            })
+            console.log(findout)
+
+            var findout=b.findLast(function(value){
+                return value<3
+            })
+            console.log(findout)
+
+            var findout=b.findLastIndex(function(value){
+                return value>6
+            })
+            console.log(findout)
+
+            var findout=b.findLastIndex(function(value){
+                return value===9
+            })
+            console.log(findout)
+
+            var s1=[1,6,9,[8,[3,[5,4]]]];
+            console.log(s1.flat(3))
+
+            var a=[1,2,6,9,8,3];
+            var obj={
+                "title":"angular"
+            }
+            console.log(typeof a)
+            console.log(Array.isArray(a));
+            console.log(Array.isArray(obj))          
+        </script>
+    </body>
+</html>

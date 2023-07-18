@@ -1,0 +1,39 @@
+<html>
+    <head></head>
+    <body>
+        <div>
+            <img src="" id="s1" width="300px" height="200px">
+            <br>
+            <button onclick="preImage()">Previous</button>
+            <button onclick="nextImage()">Next</button>
+        </div>
+    <script>
+        var i=1;
+        var images=[
+            "https://s3.amazonaws.com/dcmcarimages/car-images/McLaren/MP4-12C-Coupe/488141/SBM11AAA5CW000941_1.jpg",
+            "https://th.bing.com/th/id/OIP.GjAo12_-WwOyeLBPm6fX9QHaEK?pid=ImgDet&rs=1",
+            "https://th.bing.com/th/id/OIP.rwnuW_0o4LxfkyRrOzOGxAHaE8?pid=ImgDet&rs=1"
+        ]
+
+        var d1=document.getElementById('s1');
+        d1.src=images[i]
+
+        function nextImage(){
+            if(i===images.length-1){
+            i=-1
+        }
+            i++;
+            d1.src=images[i]
+        }
+
+        function preImage(){
+            if(i===images.length-1){
+                i=1
+            }
+            i--;
+            d1.src=images[i];
+
+        }
+    </script>
+    </body>
+</html>

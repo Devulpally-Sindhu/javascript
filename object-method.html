@@ -1,0 +1,62 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            var obj1 = {
+                "title":"angular",
+                "age":32
+            };
+            var obj2 = {
+                "title":"angular",
+                "age":38
+            }
+            obj1.title="css"
+            obj1.gender="female"
+            console.log(obj1);
+        
+            Object.assign(obj1,obj2)
+            console.log(obj1)
+            console.log(obj2)
+
+            console.log(Object.entries(obj1))
+            console.log(obj1);
+            console.log(Object.entries(obj2))
+            console.log(obj2)
+            console.log(Object.keys(obj1))
+            console.log(Object.values(obj2))
+
+            var abc={
+                "name":"sindhu",
+                "course":"HTML"
+            };
+            Object.freeze(abc)
+            abc.name="keerthi"
+            abc.position="software"
+            console.log(abc)//freeze returns exsiting properties are not added in the object 
+
+            var abc={
+                "name":"sindhu",
+                "course":"HTML"
+            };
+            Object.seal(abc)
+            abc.name="keerthi"
+            abc.position="software"
+            console.log(abc)//seal returns property adding to the object that is not considered it will gives change the property
+             
+            console.log(abc.toString())
+            console.log(JSON.stringify(abc))
+            console.log(typeof JSON.stringify(abc))
+            console.log(JSON.parse(JSON.stringify(abc)))
+            console.log(typeof JSON.parse(JSON.stringify(abc)))
+
+
+
+
+
+
+            
+
+
+        </script>
+    </body>
+</html>

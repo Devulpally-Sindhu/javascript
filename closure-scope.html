@@ -1,0 +1,39 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            var ar=[function(){
+                console.log("hi")},
+                function(){
+                    console.log("hello")}]
+            console.log(ar[0]) //output function definition f(){console.log("hi")} print avtadi
+            ar[0]() //function call ayi "hi print ayatdi"
+
+            var ar=[];
+            for(var i=1;i<=4;i++){
+                ar.push(function(){console.log(i)})
+            }
+           ar[1]()
+           ar[2]()
+           ar[0]() // var tho for loop chesinapudhu global scope variable tappa values bind avavu
+
+           var ar=[];
+           for(let i=0;i<=4;i++){
+            ar.push(function(){
+                console.log(i)
+            })
+           }
+           ar[0]() //let tho for loop chesinapudhu 2 scopes vasty global & block scope
+
+           var br=[11,22,83,94];
+           var cr=[];
+           br.forEach(function(b,j){
+            cr.push(function(){
+                console.log(j)
+            })
+           })
+           console.log(cr) //closure scope and block scope can bind along with variable & value
+
+        </script>
+    </body>
+</html>

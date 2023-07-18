@@ -1,0 +1,29 @@
+<html>
+    <head></head>
+    <body>
+        <h1>This is heading element</h1>
+        <img src="https://th.bing.com/th/id/OIP.uQIJb1TyA7jlthe248QeFgHaEK?pid=ImgDet&rs=1" width="200px" alt="">
+        <div id="d1" style="border:2px solid;margin:10px;padding:10px"></div>
+        
+    <script>
+        var jshel1=document.createElement('h1');
+        jshel1.innerHTML="This ui generation class";
+        document.body.appendChild(jshel1);
+
+       var d1ref=document.getElementById('d1')
+       d1ref.appendChild(jshel1)
+
+       var k=document.createElement('h2')
+       k.innerHTML="This is another javascript class"
+       d1ref.appendChild(k);
+
+       var img1=document.createElement('img')
+       img1.src="https://th.bing.com/th/id/OIP.uQIJb1TyA7jlthe248QeFgHaEK?pid=ImgDet&rs=1"
+       d1ref.appendChild(img1)
+       img1.style.width=200;
+       img1.style.borderRadius="300Px"
+       img1.style.width="200px"
+
+    </script>
+    </body>
+    </html>

@@ -1,0 +1,117 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            var ar=[1,8,9,6,5];
+            console.log(ar.sort())
+            var br=["Grapes","hello","apple","rabbit"];
+            console.log(br.sort());
+            var s=['A','v','M','c','r','p'];
+            console.log(s.sort())
+            var s1=s.map(function(value){
+                return value.toLowerCase()
+            })
+            console.log(s1)
+            console.log(s1.sort())
+            var s1=[1,9,8,91,84,23,36]
+            var s2=s1.sort(function(a,b){
+                return a-b
+            })
+            console.log(s2)//ascending order it prints
+
+            var s2=s1.sort(function(a,b){
+                return b-a;
+            })
+            console.log(s2);
+
+            var people = [
+{
+"firstname": "praveen",
+"lastname": "gubbala",
+"age": 36,
+"gender": "male",
+"city": "hyd",
+"salary": 10000
+},
+{
+"firstname": "srikanth",
+"lastname": "gubbala",
+"age": 32,
+"gender": "male",
+"city": "bengaluru",
+"salary": 20000
+},
+{
+"firstname": "pradeep",
+"lastname": "reddy",
+"age": 21,
+"gender": "male",
+"city": "hyd",
+"salary": 25000
+},
+{
+"firstname": "mounika",
+"lastname": "mudiraj",
+"age": 20,
+"gender": "female",
+"city": "nalgonda",
+"salary": 30000
+},
+{
+"firstname": "nikhil",
+"lastname": "m",
+"age": 22,
+"gender": "male",
+"city": "guntur",
+"salary": 2000
+},
+{
+"firstname": "riya",
+"lastname": "bhadouria",
+"age": 14,
+"gender": "female",
+"city": "indore",
+"salary": 40000
+}
+];
+
+var first=people.filter(function(value){
+                    return (value.people==="firstname")
+                  })
+                  console.log(first)
+
+
+
+                  people.sort(function(a,b){
+                    if(a.salary<b.salary){
+                        return -1
+                    }
+                    if(a.salary>b.salary){
+                        return 1
+                    }
+                    return 0;
+                  })
+                  console.log(people)
+
+                  people.sort(function(a,b){
+                    if(a.firstname<b.firstname){
+                        return 1
+                    }
+                    if(a.firstname>b.firstname){
+                        return -1
+                    }
+                    return 0;
+                  })
+                  console.log(people)
+
+                 
+
+
+
+
+                 
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,57 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            var a=9999;
+            var b=444;
+            var x;  
+            x=a//a=9999,x=9999,b=444
+            a=b//b=444,a=444,x=9999
+            b=x//x=9999,b=9999,a=444          
+            console.log(b);
+            console.log(a);
+            console.log(x)
+
+            var a=91;
+            var b=61;
+            var c
+           
+            var x=100;
+            var y=200;
+            var x=x+y;
+            var y=x-y;
+            var x=x-y;
+            console.log(x);
+            console.log(y);
+
+            var a=1234
+            var rem;
+            var sum=0;
+
+            rem=a%10;//a=1234,sum=0,rem=4
+            sum=sum+rem;//rem=4,sum=4,a=1234
+            a=parseInt(a/10);//a=123,rem=4,sum=4
+
+            rem=a%10;//a=123,sum=4,rem=3
+            sum=sum+rem;//rem=3,sum=7,a=123
+            a=parseInt(a/10);//a=12,rem=3,sum=7
+
+            rem=a%10;//a=12,rem=2,sum=7
+            sum=sum+rem;//sum=9,rem=2,a=12
+            a=parseInt(a/10);//a=1,rem=2,sum=9
+
+            rem=a%10;//rem=1,a=1,sum=9
+            sum=sum+rem;//a=1,sum=10,rem=1
+            a=parseInt(a/10);//a=0,rem=0,sum=10
+            
+
+
+
+            
+
+    
+
+
+        </script>
+    </body>
+</html>

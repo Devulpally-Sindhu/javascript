@@ -1,0 +1,63 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            var x=100; //var x is called "declaration" & =100 means initialization
+            for(var i=1;i<=4;i++){
+                console.log(x)
+                var x=300;
+            }
+            console.log(x)
+
+            if(10>300){
+                var x=200;
+            }
+            console.log(x)
+
+            console.log(a)
+            console.log(z)
+            console.log(y)
+            var y=400;
+            var z;
+
+            if(10>300){
+                var a;
+            }
+
+            var d=400;
+            function abc(){   
+                var d=600;
+                console.log(d)
+            }
+            abc()
+            console.log(d)
+
+            let b=400;
+            function abc(){
+               
+                let b=600;
+                console.log(b)
+            }
+            abc()
+            console.log(b)
+
+
+            function pqr(){
+                var p=14;
+               {
+                let f=89;
+                function xyz(){
+                    console.log(p); //p is closure scope
+                    console.log(b); // global scope.
+                    console.log(f); //block scope.
+                }
+               }
+               xyz()
+               console.dir(xyz)
+            }
+            pqr() //indulo 2 scopes bind aynavi 1.closure scope,2.global scope                                      
+        </script>
+    </body>
+</html>
+
+<!--interpretation is called step by step execution of the code.(after hoisting)-->

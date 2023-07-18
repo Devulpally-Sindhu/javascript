@@ -1,0 +1,33 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            function abc(){
+                return 'edupoly'
+            }//Function definition 
+             
+             var a=abc;
+            console.log(a)
+
+
+            var b=function(){
+                return 'hello'
+            }
+            var c=b();
+            console.log(c); //Function expression & function literals
+
+            (function(){
+                console.log('i am learning')
+            })()// Immediately invoked function
+
+            function abc(c){
+                c()
+            }
+                abc(function(){
+                console.log("Hello i am sindhu")
+            })//Call back function
+
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            class Mobile{
+                company;
+                price;
+                ram;
+                rom;
+                model;
+                processor;
+                discount;//properties
+                constructor(c,p,ra,ro,m,pr,dis){ //constructor function
+                    this.company=c;
+                    this.price=p;
+                    this.ram=ro;
+                    this.rom=ra;
+                    this.model=m;
+                    this.processor=pr;
+                    this.discount=dis;                
+                }
+                getFinalPrice(){
+                    return this.price-this.price*(this.discount/100)
+                }
+            }
+            var gmobile=new Mobile('samsung',12000,'12gb','24gb','s1','xb',20);
+            var mmobile=new Mobile('redmi',14000,'24gb','89gb','s12','sr1',4);
+            var gfinal=gmobile.getFinalPrice()
+            var mfinal=mmobile.getFinalPrice()
+
+            console.dir(gmobile);
+            console.dir(gfinal)
+            console.dir(mmobile);
+            console.dir(mfinal)
+
+        </script>
+    </body>
+</html>

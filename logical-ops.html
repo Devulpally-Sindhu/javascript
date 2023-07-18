@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <body>
+            <script>
+                console.log("true"&&"hello")
+                console.log(false&&"hello")
+                console.log("false"&&"hello")
+                console.log(true&&"hello")
+
+
+                var a=false;
+                var b=true;
+                console.log(a && b);
+
+                var a=false;
+                var b=false;
+                console.log(a && b);
+
+                var a=true;
+                var b=true;
+                console.log(a && b);
+
+                var a=true;
+                var b=false;
+                console.log(a || b);
+
+                var a=100;
+                var b=false;
+                console.log(a && b);
+                console.log(a || b); //"||" operation perform at the time of execution it see the truthy value then that value it returns in this case "100" is the output
+
+                var a=false;
+                var b=false;
+                var c=100;
+                var d=900;
+
+                console.log(a||b||c||d) // this is called  || short circit evaluation (or "||" short circuit evaluation checks the only true value then its returns)
+
+                var a=0;
+                var b=false;
+                var c=9;
+                var d=14;
+
+                console.log(a && b && c && d) // this is called && short circuit evaluation it checks the only false value then its returns
+
+                var a=100;
+                var b="india";
+                var c='';
+                var d='sindhu';
+
+                console.log(a || b|| c|| d);
+                console.log(a && b && c && d);
+
+                var a=0;
+                var b=null;
+                console.log(a && b)
+
+
+            
+
+                /*
+                    Truthy values
+                    all other than falsy values
+
+                
+                    Falsy values
+                    false
+                    0
+                    NaN
+                    ""   
+                    null 
+                    
+                    
+                    Logical operators it will give any thing boolean (or) number 
+
+
+
+                    */
+
+                
+            </script>
+        </body>
+    </head>
+</html>

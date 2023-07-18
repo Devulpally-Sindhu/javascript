@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <ul id="d1"></ul>
+        <script>
+            axios.get("https://fakestoreapi.com/products").then(function(res){
+                res.data.forEach(function(products){
+                    var k=document.createElement('li')
+                    k.innerHTML=products.price;
+                    document.getElementById('d1').appendChild(k)
+
+                })
+                    
+                });
+                    
+                
+            
+        </script>
+    </body>
+</html>

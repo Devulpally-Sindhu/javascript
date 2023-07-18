@@ -1,0 +1,28 @@
+<html>
+    <head></head>
+    <body>
+         <form onsubmit="event.preventDefault()">
+        <label for="">Firstname</label>
+        <input type="text" id="fn">
+        <label for="">Lastname</label>
+        <input type="text" id="ln">
+        <button onclick="print()">print</button>
+         </form>
+        <script>
+            var fn=document.getElementById('fn');
+            var ln=document.getElementById('ln');
+            function print(){
+                var obj={
+                    "firstname":"",
+                    "lastname":""
+                }
+                obj.firstname=fn.value;
+                obj.lastname=fn.value;
+                console.log(obj)
+               
+            }
+           
+
+        </script>
+    </body>
+</html>

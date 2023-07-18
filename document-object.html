@@ -1,0 +1,46 @@
+<html>
+    <head></head>
+    <body>
+        <h1 onclick="abc(event)">Hello Events</h1>
+        <h4>India</h4>
+        <ul id="d4">
+            <li>USA</li>
+            <li id="dd">America</li>
+            <li>China</li>
+            <li>Japan</li>
+        </ul>
+        <ol id="employees"></ol>
+        <script>
+            console.dir(document);
+            var x=document.getElementsByTagName('h1');
+            console.dir(x)
+            var x=document.getElementsByTagName('li')
+            console.dir(x)
+            console.dir(x[2])
+            x[2].style.backgroundColor='green';
+            var x=document.getElementsByTagName('li')
+            for(var i=0;i<=x.length-1;i++){
+                x[i].style.color="blue"
+                x[i].style.background="pink"
+                x[i].style.padding="10px"
+                x[i].style.margin="15px"
+            }
+            var y=document.getElementById('dd')
+            console.dir(y)
+            y.style.borderRadius="14px"
+            console.log(document.getElementById('dd').innerHTML)
+            console.log(document.getElementById('d4'));
+            console.log(document.getElementById('d4').innerHTML)
+            console.log(document.getElementById('d4').innerText)
+            y.innerHTML="Australia"
+            var emps=['sindhu','keerthi','amma','dady']
+             emps.forEach(function(emp){
+                var k=document.createElement('li')
+                k.innerHTML=emp
+                document.getElementById('employees').appendChild(k)
+            })
+
+            
+        </script>
+    </body>
+</html>

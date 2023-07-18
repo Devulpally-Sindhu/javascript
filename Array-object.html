@@ -1,0 +1,112 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            var people=[
+                {
+                    "firstname":"devulapally",
+                    "lastname":"sindhu",
+                    "age":32,
+                    "gender":"female",
+                    "city":"sdpt",
+                    "salary":100000
+                },
+                {
+                    "firstname":"bairi",
+                    "lastname":"keerthi",
+                    "age":36,
+                    "gender":"female",
+                    "city":"wrgl",
+                    "salary":200
+                },
+                {
+                    "firstname":"puli",
+                    "lastname":"mangadevi",
+                    "age":52,
+                    "gender":"female",
+                    "city":"husnabad",
+                    "salary":400000
+                },
+                {
+                    "firstname":"devulapally",
+                    "lastname":"rajaram",
+                    "age":62,
+                    "gender":"male",
+                    "city":"kondapak",
+                    "salary":900000
+                },
+                {
+                    "firstname":"bairi",
+                    "lastname":"hanumath raghuveer",
+                    "age":10,
+                    "gender":"male",
+                    "city":"jaffarghad",
+                    "salary":800000
+                },
+
+                {
+                    "firstname":"bukka",
+                    "lastname":"sowjanya",
+                    "age":28,
+                    "gender":"female",
+                    "city":"sdpt",
+                    "salary":300000
+                },
+            ]
+
+            people.forEach(function(value){
+                console.log (value.firstname)
+            })
+
+            people.forEach(function(value){
+                console.log(value)
+            })
+
+            people.forEach(function(value){
+                if(value.age>25){
+                    console.log(value.firstname)
+                }
+            })
+
+            var age25=people.filter(function(value){
+                return (value.age>25)
+            })
+            console.log(age25)
+
+            var city=people.filter(function(value){
+                return (value.city==="sdpt")
+            })
+            console.log(city)
+
+            var salary=people.reduce(function(acc,value){
+                return acc+value.salary;
+            },0)
+            console.log(salary);
+
+            var count=0;   
+            var issalarylessthan=people.some(function(value){
+                return value.firstname==="bairi"
+            })
+            console.log(issalarylessthan) //some method checks given condition in any where in the current array it checks it gives the output true or false.some anedi array lo akkadyna ha condition satisfy aytene it will give the output true or false
+
+            var isSalaryLessThan10k=people.every(function(value){
+                return (value.salary>10000)
+
+            })
+            console.log(isSalaryLessThan10k)// every method checks anni arrays lo ha condition satisfy aytene it gives the output true or false
+
+        
+
+
+
+
+
+
+
+
+
+
+            
+        </script>
+    </body>
+</html>

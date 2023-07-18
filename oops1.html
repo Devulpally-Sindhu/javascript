@@ -1,0 +1,33 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            class Laptop{
+                company;
+                price;
+                model;
+                colour;
+                ram;
+                rom;
+                discount;
+                constructor(c,p,m,col,ra,ro,dis){
+                    this.company=c;
+                    this.price=p;
+                    this.model=m;
+                    this.colour=col;
+                    this.ram=ra;
+                    this.rom=ro;
+                    this.discount=dis;
+                }
+                getFinalPrice(){
+                    return this.price-this.price*(this.discount/100)
+                }
+
+            }
+            var mylaptop=new Laptop('hp',75000,'high','metal','12gb','24gb',40);
+            console.dir(mylaptop);
+            var finalcost=mylaptop.getFinalPrice()
+            console.dir(finalcost)
+        </script>
+    </body>
+</html>

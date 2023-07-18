@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <script>
+             axios.put("https://fakestoreapi.com/products/21",{
+                category:"ladies sarees",
+                description:"Awesome",
+                image:"https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRH2cf69N4btzVM01L5FwTy4A8DDrfLj7ab7d_b7sWlUvw0yh7fjTi_rm_sWSzBhW8KaTCuSeByjHcrXEpdImLBJL49R7Va2xca_JRBswrOkYv0W_C86h5FhUTFhgJKb2xd3JU&usqp=CAc",
+                price:"2000",
+                title:"womens sarees"
+             }).then((res)=>{
+                console.log(res)
+             })                
+        </script>
+    </body>
+</html>

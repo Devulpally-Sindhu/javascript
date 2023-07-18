@@ -1,0 +1,132 @@
+<html>
+    <head></head>
+    <body>
+        <form onsubmit="event.preventDefault()" name="userForm">
+        <label for="">Firstname</label>
+        <input type="text" name="fn"><br><br>
+        <label for="">Lastname</label>
+        <input type="text" name="ln"><br><br>
+        <label for="">DOB</label>
+        <input type="date" name="dob"><br><br>
+        <label for="">Gender</label>
+        <input type="radio" name="gender" value="female">Female
+        <input type="radio" name="gender" value="male">Male
+        <input type="radio" name="gender" value="others">Others <br><br>
+        <label for="">Languages</label>
+        <input type="checkbox" name="languages" value="English">English
+        <input type="checkbox" name="languages" value="Hindi">Hindi
+        <input type="checkbox" name="languages" value="Telugu">Telugu <br><br>
+        <label for="">Select course name</label>
+        <select name="course">
+            <option value="Angular">Angular</option>
+            <option value="ReactJs">ReactJs</option> 
+        </select> <br><br>
+        <label for="">Address</label>
+        <textarea name="address"></textarea> <br><br>
+
+        <button onclick="print()">Print</button>
+
+        <div id="d2"></div>
+
+        </form>
+        <script>
+            var people=[]
+            var userForm=document.userForm;
+            var mainDiv=document.getElementById('d2')
+    var table=document.createElement('table');
+    table.setAttribute("border",2);
+
+
+            function print(){
+            var person={
+                "firstname":"",
+                "lastname":"",
+                "dob":"",
+                "gender":"",
+                "languages":[],
+                "course":"",
+                "address":""
+            }
+            person.firstname=userForm.fn.value;
+            person.lastname=userForm.ln.value;
+            person.dob=userForm.dob.value;
+            person.gender=userForm.gender.value;
+            userForm.languages.forEach(function(language){
+                if(language.checked===true){
+                    person.languages.push(language.value)
+                }
+            })
+            person.course=userForm.course.value;
+            person.address=userForm.address.value;
+            people.push(person);
+            userForm.reset();
+            createTable(people)
+
+            
+        }
+        function createTable(array){
+         table.innerHTML=""
+    var thead=document.createElement('tr')
+
+    var th1=document.createElement('th');
+    th1.innerHTML="Firstname";
+    var th2=document.createElement('th');
+    th2.innerHTML="Lastname";
+    var th3=document.createElement('th');
+    th3.innerHTML="DOB";
+    var th4=document.createElement('th');
+    th4.innerHTML="Gender";
+    var th5=document.createElement('th');
+    th5.innerHTML="Languages";
+    var th6=document.createElement('th');
+    th6.innerHTML="course";
+    var th7=document.createElement('th');
+    th7.innerHTML="address";
+
+
+    thead.appendChild(th1);
+    thead.appendChild(th2);
+    thead.appendChild(th3);
+    thead.appendChild(th4);
+    thead.appendChild(th5);
+    thead.appendChild(th6);
+    thead.appendChild(th7);
+
+
+    table.appendChild(thead);
+
+    array.forEach(function(person){
+        var trow=document.createElement('tr');
+
+    var td1=document.createElement('td');
+    td1.innerHTML=person.firstname
+    var td2=document.createElement('td');
+    td2.innerHTML=person.lastname
+    var td3=document.createElement('td');
+    td3.innerHTML=person.dob
+    var td4=document.createElement('td');
+    td4.innerHTML=person.gender
+    var td5=document.createElement('td');
+    td5.innerHTML=person.languages
+    var td6=document.createElement('td');
+    td6.innerHTML=person.course
+    var td7=document.createElement('td');
+    td7.innerHTML=person.address
+
+
+    trow.appendChild(td1);
+    trow.appendChild(td2);
+    trow.appendChild(td3);
+    trow.appendChild(td4);
+    trow.appendChild(td5);
+    trow.appendChild(td6);
+    trow.appendChild(td7);
+
+
+    table.appendChild(trow)
+    })
+    mainDiv.appendChild(table);
+        }
+        </script>
+    </body>
+</html>

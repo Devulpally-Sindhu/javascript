@@ -1,0 +1,101 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+             var people=[
+                {
+                    "firstname":"devulapally",
+                    "lastname":"sindhu",
+                    "age":32,
+                    "gender":"female",
+                    "city":"sdpt",
+                    "salary":10000
+                },
+                {
+                    "firstname":"bairi",
+                    "lastname":"keerthi",
+                    "age":36,
+                    "gender":"female",
+                    "city":"wrgl",
+                    "salary":20000
+                },
+                {
+                    "firstname":"puli",
+                    "lastname":"mangadevi",
+                    "age":52,
+                    "gender":"female",
+                    "city":"husnabad",
+                    "salary":30000
+                },
+                {
+                    "firstname":"devulapally",
+                    "lastname":"rajaram",
+                    "age":62,
+                    "gender":"male",
+                    "city":"kondapak",
+                    "salary":40000
+                },
+                {
+                    "firstname":"bairi",
+                    "lastname":"hanumath raghuveer",
+                    "age":10,
+                    "gender":"male",
+                    "city":"jaffarghad",
+                    "salary":50000
+                },
+
+                {
+                    "firstname":"bukka",
+                    "lastname":"sindhu",
+                    "age":28,
+                    "gender":"female",
+                    "city":"sdpt",
+                    "salary":60000
+                },
+            ];
+
+          
+          
+             var findLastName=people.find(function(value){
+               return value.lastname==="mangadevi"
+                  })
+                  console.log(findLastName);
+
+                  var findFirstName=people.find(function(value){
+               return value.firstname==="devulapally"
+                  })
+                  console.log(findFirstName)
+
+                  var salary=people.find(function(value){
+               return value.salary>5000
+                  })
+                  console.log(salary)
+
+                  var salary=people.find(function(value){
+               return value.salary>50000
+                  })
+                  console.log(salary)
+
+                  var result=people.findIndex(function(value){
+                    return value.firstname==="devulapally" || value.lastname==="sindhu"
+                  })
+                  console.log(result)
+                  people.splice(result,4)
+                  console.log(people)
+
+                  var result=people.findIndex(function(value){
+                    return value.firstname==="devulapally" && value.lastname==="sindhu"
+                  })
+                  console.log(result)
+                  people.splice(result,1)
+                  console.log(people);
+
+                  
+
+
+                
+
+
+        </script>
+    </body>
+</html>

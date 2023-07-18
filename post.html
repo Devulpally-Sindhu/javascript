@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <script>
+             axios.post("https://fakestoreapi.com/products",{
+                category:"ladies curties",
+                description:"Awesome",
+                image:"https://cdn.shopify.com/s/files/1/0605/9550/3283/files/IMG_8410_1440x1800.jpg?v=1683480535",
+                price:"140",
+                title:"womens Caual"
+             }).then((res)=>{
+                console.log(res)
+             })                
+        </script>
+    </body>
+</html>

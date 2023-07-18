@@ -1,0 +1,45 @@
+<html>
+    <head></head>
+    <body>
+        <input type="text">
+        <ul id="d1"></ul>
+        <script>
+            var players=['sindhu','hanu','sanvi','amma'];
+           function genPlayList(){
+            document.getElementById('d1').innerHTML=""
+            players.forEach(function(value,i){
+                var newli=document.createElement('li');
+                newli.innerHTML=value;
+                var delbtn=document.createElement('button');
+                delbtn.innerHTML='Delete';
+                delbtn.onclick=function(){
+                    players.splice(i,1)
+                    genPlayList()
+                }
+                newli.appendChild(delbtn)
+                document.getElementById('d1').appendChild(newli)
+            })
+           }
+           genPlayList()
+        </script>
+    </body>
+</html>
+<!--<button onclick="alert('hi')">Click me</button>
+<script>
+   var players=["sindhu","amma","dady","akka"];
+    players.forEach(function(value){
+        var k=document.createElement('li');
+        k.innerHTML=value;
+        document.getElementById('d1').appendChild(k)
+    })
+
+    
+           var bt1=document.getElementById('d2').addEventListener('click',function(){
+                alert("hello")
+            })
+
+            var bt1=document.getElementById('d2').onclick=function(){
+                alert("amma")
+            }-->
+
+            
